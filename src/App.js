@@ -30,13 +30,13 @@ function App() {
   return (
     <div className="card" style={{ width: 400 }}>
       <div className="card-content">
-        <p className="is-4 title has-text-centered">Add Person</p>
+        <p className="is-4 title has-text-centered">Add Pet</p>
         <div className="field">
           <label className="label">Name</label>
           <input
             className="input"
             type="text"
-            placeholder="e.q John Smith"
+            placeholder="e.q Coco"
             onChange={(e) => setInputName(e.target.value)}
           ></input>
         </div>
@@ -63,13 +63,13 @@ function App() {
           <input
             className="input"
             type="number"
-            placeholder="e.q 30"
+            placeholder="e.q 5"
             onChange={(e) => setInputAge(e.target.value)}
           ></input>
         </div>
 
         <button
-          className="button is-primary is-fullwidth"
+          className="button is-danger is-fullwidth"
           onClick={() => add(inputName, inputGender, inputAge)}
         >
           Submit
@@ -77,7 +77,7 @@ function App() {
 
         <div className="mb-4"></div>
 
-        <p className="is-4 title has-text-centered">Person List</p>
+        <p className="is-4 title has-text-centered">Pet List</p>
         {persons.map((x, i) => (
           <PersonTable {...x} key={i} />
         ))}
